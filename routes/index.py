@@ -34,7 +34,7 @@ def login():
     else:
         session['user_id'] = u.id
         session.permanent = True
-        return redirect(url_for('topic.index'))
+        return redirect(url_for('sz.index'))
 
 
 # 修改用户密码，需要加盐

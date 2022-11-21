@@ -9,7 +9,7 @@ main = Blueprint('sz', __name__)
 
 @main.route("/")
 @login_required
-def sz():
+def index():
     return render_template("message/index.html")
 
 
