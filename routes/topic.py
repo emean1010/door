@@ -13,6 +13,7 @@ main = Blueprint('topic', __name__)
 
 
 @main.route("/")
+@login_required
 def index():
     topics = Topic.all()
     return render_template("topic/index.html", topics=topics)
