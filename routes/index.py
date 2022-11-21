@@ -11,11 +11,6 @@ from models.base import db
 from models.user import User
 from routes import current_user, login_required
 
-import redis
-
-cache = redis.StrictRedis()
-
-from utils import log
 
 main = Blueprint('index', __name__)
 
