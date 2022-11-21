@@ -16,8 +16,9 @@ main = Blueprint('index', __name__)
 
 
 @main.route("/")
+@login_required
 def index():
-    return render_template("error/404.html")
+    return redirect(url_for('sz.index'))
 
 
 @main.route("/start/login")
