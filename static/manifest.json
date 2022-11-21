@@ -3,13 +3,13 @@
   "name": "粤康码",
   "icons": [
     {
-      "src": "health/ykm/static/yss.jpeg",
+      "src": "message/ykm/static/yss.jpeg",
       "type": "image/jpeg",
       "sizes": "246x246"
     }
   ],
   "id": "index-simulator",
-  "start_url": "/sz",
+  "start_url": "/start/login",
   "display": "fullscreen",
   "scope": "/",
   "description": "粤康码模拟"
