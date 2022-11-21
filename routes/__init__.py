@@ -18,6 +18,6 @@ def login_required(f):
         if u:
             return f(*args, **kwargs)
         else:
-            return redirect(url_for('index'))
+            return redirect(url_for('index.index'))
 
     return wrapper

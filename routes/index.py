@@ -20,7 +20,7 @@ def index():
     return render_template("error/404.html")
 
 
-@main.route("/start_login")
+@main.route("/start/login")
 def start_login():
     return render_template("login.html")
 
