@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<form method="POST" action={{ url_for(".login") }}>
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <button type="submit">登录</button>
+</form>
+
+<form method="POST" action={{ url_for(".change_pass") }}>
+    <input type="password" name="old_pass">
+    <input type="password" name="new_pass">
+    <button type="submit">修改密码</button>
+</form>
+</body>
+</html>
