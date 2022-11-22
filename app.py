@@ -11,9 +11,7 @@ def configured_app():
     _app = Flask(__name__)
     _app.secret_key = secret.secret_key
 
-    uri = 'mysql+pymysql://root:{}@localhost/door?charset=utf8mb4'.format(
-        secret.database_password
-    )
+    uri = f'mysql+pymysql://root:{secret.database_password}@localhost/door?charset=utf8mb4'
     _app.config['SQLALCHEMY_DATABASE_URI'] = uri
     _app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(_app)
@@ -31,7 +29,6 @@ if __name__ == '__main__':
     app.jinja_env.auto_reload = True
     app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
     config = dict(
-        debug=False,
         host='0.0.0.0',
         port=2000,
     )

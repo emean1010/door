@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>topic</title>
-</head>
-<body>
-    <form action="/topic/update/{{topic.id}}" method="post">
-        <input name="content" value="{{topic.content}}">
-        <br>
-        <button type="submit">submit</button>
-    </form>
-</body>
-</html>
+{% extends "base.html" %}
+{% block main %}
+<form action="/topic/update/{{topic.id}}" method="post">
+    <input name="content" value="{{topic.content}}">
+    <br>
+    <button type="submit">submit</button>
+</form>
+{% endblock %}

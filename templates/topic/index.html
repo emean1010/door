@@ -1,11 +1,5 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>todo</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-</head>
-<body>
+{% extends "base.html" %}
+{% block main %}
 <form action="/topic/add" method="POST">
     <input type="text" name="content">
     <br>
@@ -14,10 +8,10 @@
 
 <div>
     {% for t in topics %}
-    <h3>{{t.id}} : {{t.content}}</h3>
+    <h3>{{t.content}}</h3>
     <a href="/topic/{{t.id}}">update</a>
     <a href="/topic/delete/{{t.id}}">delete</a>
+    <br>
     {% endfor %}
 </div>
-</body>
-</html>
+{% endblock %}

@@ -23,7 +23,10 @@ def index():
 
 @main.route("/start/login")
 def start_login():
-    return render_template("login.html")
+    if current_user():
+        return redirect(url_for('sz.index'))
+    else:
+        return render_template("login.html")
 
 
 @main.route("/login", methods=['POST'])
