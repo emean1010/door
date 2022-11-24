@@ -2,14 +2,17 @@
 {% block main %}
 <form action="/topic/add" method="POST">
     <input type="text" name="content">
-    <button type="submit">add</button>
+    <button class="btn" type="submit" style="background-color:chartreuse"></button>
 </form>
 
 <div>
     {% for t in topics %}
-    <h3>{{t.content}}</h3>
-    <a href="/topic/{{t.id}}">update</a>
-    <a href="/topic/delete/{{t.id}}">delete</a>
+    <form action="/topic/update/{{t.id}}" method="post">
+        <input name="content" value="{{t.content}}">
+        <button class="btn" type="submit" style="background-color:indigo"></button>
+    </form>
+    <a class="btn" href="/topic/switch/{{t.id}}" style="background-color:black"></a>
+    <a class="btn" href="/topic/delete/{{t.id}}" style="background-color:red"></a>
     {% endfor %}
 </div>
 {% endblock %}

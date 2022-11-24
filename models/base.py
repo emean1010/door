@@ -1,11 +1,15 @@
+import datetime
+
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import Column, Integer
+from sqlalchemy import Column, Integer, DateTime
 
 db = SQLAlchemy()
 
 
 class SQLMixin(object):
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    create_time = Column(DateTime, default=datetime.datetime.now, comment='创建时间')
+    update_time = Column(DateTime, default=datetime.datetime.now, comment='更新时间')
 
     @classmethod
     def new(cls, data):
@@ -19,6 +23,7 @@ class SQLMixin(object):
     def update(self, **kwargs):
         for name, value in kwargs.items():
             setattr(self, name, value)
+        self.update_time = datetime.datetime.now()
         db.session.add(self)
 
     @classmethod
@@ -27,7 +32,7 @@ class SQLMixin(object):
 
     @classmethod
     def all(cls, **kwargs):
-        return cls.query.filter_by(**kwargs).all()
+        return cls.query.filter_by(**kwargs).order_by(cls.update_time.desc()).all()
 
     @classmethod
     def columns(cls):

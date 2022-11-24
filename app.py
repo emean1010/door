@@ -1,17 +1,17 @@
 from flask import Flask
 
-import secret
 from models.base import db
 from routes.index import main as index_routes
 from routes.topic import main as topic_routes
 from routes.message import main as message_routes
+from secret import db_name, secret_key, database_password
 
 
 def configured_app():
     _app = Flask(__name__)
-    _app.secret_key = secret.secret_key
+    _app.secret_key = secret_key
 
-    uri = f'mysql+pymysql://root:{secret.database_password}@localhost/door?charset=utf8mb4'
+    uri = f'mysql+pymysql://root:{database_password}@localhost/{db_name}?charset=utf8mb4'
     _app.config['SQLALCHEMY_DATABASE_URI'] = uri
     _app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(_app)

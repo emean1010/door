@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-{% block main %}
-<form action="/topic/update/{{topic.id}}" method="post">
-    <input name="content" value="{{topic.content}}">
-    <br>
-    <button type="submit">submit</button>
-</form>
-{% endblock %}

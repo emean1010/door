@@ -28,11 +28,13 @@ def add():
     return redirect(url_for('.index'))
 
 
-@main.route('/<int:id>')
+@main.route("/switch/<int:id>", methods=["POST", "GET"])
 @login_required
-def edit(id):
+def switch(id):
     m = Topic.one(id=id)
-    return render_template("topic/detail.html", topic=m)
+    m.switch()
+    db.session.commit()
+    return redirect(url_for('.index'))
 
 
 @main.route("/update/<int:id>", methods=["POST"])
