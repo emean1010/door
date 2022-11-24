@@ -14,3 +14,7 @@ class Topic(SQLMixin, db.Model):
     @classmethod
     def all(cls, **kwargs):
         return cls.query.filter_by(**kwargs).order_by(cls.status.desc(), cls.create_time).all()
+
+    @classmethod
+    def all_used(cls):
+        return cls.query.filter(cls.status == 1).order_by(cls.create_time).all()

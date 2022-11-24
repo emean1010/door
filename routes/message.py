@@ -22,7 +22,7 @@ def detail():
 @main.route("/ch")
 @login_required
 def checkin():
-    topics = Topic.all()
+    topics = Topic.all_used()
     contents = [m.content for m in topics]
     return render_template("message/checkin.html", contents=contents)
 
