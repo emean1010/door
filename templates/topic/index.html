@@ -11,12 +11,18 @@
     <form action="/topic/update/{{t.id}}" method="post">
         <div>
             <span style="line-height: 10vw">{{loop.index}}</span>
+            {% if t.status %}
             <input name="content" value="{{t.content}}">
+            {% else %}
+            <input name="content" value="{{t.content}}" disabled="disabled">
+            {% endif %}
         </div>
         <br>
         <button class="btn" type="submit" style="background-color:indigo"></button>
         <a class="btn" href="/topic/switch/{{t.id}}" style="background-color:black"></a>
+        {% if t.status %}
         <a class="btn" href="/topic/delete/{{t.id}}" style="background-color:red"></a>
+        {% endif %}
     </form>
     {% endfor %}
 </div>
