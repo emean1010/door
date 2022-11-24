@@ -10,7 +10,7 @@ ufw status verbose
 ufw -f enable
 
 apt install -y git supervisor nginx python3-pip mysql-server
-pip3 install jinja2 flask gevent gunicorn pymysql flask_sqlalchemy
+pip3 install jinja2 flask gevent gunicorn pymysql flask_sqlalchemy flask_migrate
 
 mysql -u root -pemean1010 -e "DELETE FROM mysql.user WHERE User='';"
 mysql -u root -pemean1010 -e "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');"
