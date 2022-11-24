@@ -24,9 +24,11 @@ def configured_app():
     return _app
 
 
+app = configured_app()
+migrate = Migrate(app, db)
+
+
 if __name__ == '__main__':
-    app = configured_app()
-    migrate = Migrate(app, db)
     app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.jinja_env.auto_reload = True
     app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
