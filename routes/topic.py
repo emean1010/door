@@ -23,7 +23,7 @@ def index():
 @main.route("/add", methods=["POST"])
 @login_required
 def add():
-    form = request.form
+    form = request.form.to_dict()
     m = Topic.new(form)
     db.session.commit()
     return redirect(url_for('.index'))
