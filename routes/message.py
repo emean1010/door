@@ -23,7 +23,7 @@ def detail():
 @login_required
 def checkin():
     topics = Topic.all_used()
-    contents = [m.content for m in topics]
+    contents = [[m.content, m.format_pid] for m in topics]
     return render_template("message/meeting.html", contents=contents)
 
 

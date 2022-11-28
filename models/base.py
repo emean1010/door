@@ -34,19 +34,6 @@ class SQLMixin(object):
     def all(cls, **kwargs):
         return cls.query.filter_by(**kwargs).order_by(cls.update_time.desc()).all()
 
-    @classmethod
-    def columns(cls):
-        return cls.__mapper__.c.items()
-
-    def __repr__(self):
-        name = self.__class__.__name__
-        s = ''
-        for attr, column in self.columns():
-            if hasattr(self, attr):
-                v = getattr(self, attr)
-                s += '{}: ({})\n'.format(attr, v)
-        return '< {}\n{} >\n'.format(name, s)
-
     def info(self):
         data = dict()
         for k, v in self.__dict__.items():

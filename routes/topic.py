@@ -1,7 +1,8 @@
 from flask import (
-    render_template,
     request,
     Blueprint,
+    redirect,
+    url_for,
 )
 
 from models.base import db

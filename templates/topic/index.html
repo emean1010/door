@@ -16,6 +16,7 @@
             {% else %}
             <input name="content" value="{{t.content}}" disabled="disabled">
             {% endif %}
+            <input name="pid" style="width: 20vw" value="{{t.pid | format_input}}">
         </div>
         <br>
         <button class="btn" type="submit" style="background-color:indigo"></button>

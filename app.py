@@ -7,6 +7,11 @@ from routes.message import main as message_routes
 from secret import db_name, secret_key, database_password
 
 
+def format_input(content):
+    formatted = content if content else ''
+    return formatted
+
+
 def configured_app():
     _app = Flask(__name__)
     _app.secret_key = secret_key
@@ -19,6 +24,8 @@ def configured_app():
     _app.register_blueprint(index_routes)
     _app.register_blueprint(topic_routes, url_prefix='/topic')
     _app.register_blueprint(message_routes, url_prefix='/mg/ny/hrj')
+
+    _app.template_filter()(format_input)
 
     return _app
 

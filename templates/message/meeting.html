@@ -2397,7 +2397,8 @@
         if (placeIndex >= placeArray.length) {
             placeIndex = 0;
         }
-        document.getElementById("_place").innerText = placeArray[placeIndex];
+        document.getElementById("_place").innerText = placeArray[placeIndex][0];
+        document.getElementById("_place_id").innerText = placeArray[placeIndex][1];
     }
     placeUpdate();
 
@@ -2407,7 +2408,7 @@
 
     setStaticTime("#covid-test-time", 0, 16, 10, 10)
     setStaticTime("#_time", 0, 16)
-    addStorageField("_name", "#_name", "名字", "周益民", presetFilters.name)
-    addStorageField("_place_id", "#_place_id", "场所ID", "1289650", presetFilters.phone(2, 3, 2))
+    addStorageField("_name", "#_name", "名字", "周*民", presetFilters.name)
+    addStorageField("_place_id", "#_place_id", "场所ID", "12**650", presetFilters.phone(2, 3, 2))
     addStorageField("_vaccine_date", "#vaccine-date", "疫苗接种完成日期", "2021-06-26")
 </script>
