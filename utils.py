@@ -8,3 +8,7 @@ def log(*args, **kwargs):
     with open('running.log.txt', 'a', encoding='utf-8') as f:
         print(dt, *args, file=f, **kwargs)
         print(dt, *args, **kwargs)
+
+
+def main_page():
+    return 'message.index'

@@ -1,6 +1,6 @@
 from functools import wraps
 
-from flask import session, redirect, url_for
+from flask import session, render_template
 
 from models.user import User
 
@@ -18,6 +18,6 @@ def login_required(f):
         if u:
             return f(*args, **kwargs)
         else:
-            return redirect(url_for('index.index'))
+            return render_template("error/404.html")
 
     return wrapper

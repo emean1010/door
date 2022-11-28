@@ -5,8 +5,8 @@
 <meta name="theme-color" content="#569AFE">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="manifest" href="/static/manifest.json">
-<link rel="apple-touch-icon" sizes="246x246" href="/static/message/ykm/static/yss.jpeg">
-<link rel="icon" type="image/jpeg" href="/static/message/ykm/static/yss.jpeg">
+<link rel="apple-touch-icon" sizes="246x246" href="/static/images/local/yss.jpeg">
+<link rel="icon" type="image/jpeg" href="/static/images/local/yss.jpeg">
 <link rel="stylesheet" href="/static/css/nav.css">
 <script src="/static/js/base.js"></script>
 <style>block, view {
@@ -1941,22 +1941,22 @@
         <div class="hotTemp_wrap">
             <div class="nav" style="height:44px;margin-bottom:5.333vw">
                 <image arialabel="返回" ariarole="button" bind:tap="handleNavBack" class="nav_close"
-                       src="/static/message/ykm/static/4f474259427737a36d6c292a3c2f7553.svg" onclick="navigateHome()"></image>
+                       src="/static/images/local/4f474259427737a36d6c292a3c2f7553.svg" onclick="navigateHome()"></image>
                 粤康码
             </div>
             <div class="content-list_box">
                 <div class="content-list"
-                     style="background:#fff url(/static/message/ykm/static/b739d24b3e9cf335c3d74126ce8e2b98.png);background-size:contain;background-position:right bottom;background-repeat:no-repeat">
+                     style="background:#fff url(/static/images/local/b739d24b3e9cf335c3d74126ce8e2b98.png);background-size:contain;background-position:right bottom;background-repeat:no-repeat">
                     <div class="content-list_header">
                         <div arialabel="深圳，可切换地市" ariarole="button" class="header_city"><span id="_city"></span>
                             <image arialabel="切换地市" ariarole="button" class="arrow"
-                                   src="/static/message/ykm/static/d88e60f10d7b8da943b5e9ebac2fee7f.svg"></image>
+                                   src="/static/images/local/d88e60f10d7b8da943b5e9ebac2fee7f.svg"></image>
                         </div>
                         <div class="header_name box_normal-temp">
                             <picker arialabel="" ariarole="button" bindchange="handleChange">
                                 <div class="header_name_box"><span id="_name"></span>
                                     <image arialabel="切换成员" ariarole="button" class="arrow"
-                                           src="/static/message/ykm/static/d88e60f10d7b8da943b5e9ebac2fee7f.svg"></image>
+                                           src="/static/images/local/d88e60f10d7b8da943b5e9ebac2fee7f.svg"></image>
                                 </div>
                             </picker>
                             <div arialabel="管理" ariarole="button" bind:tap="goPage"
@@ -1967,7 +1967,7 @@
                         <div arialabel="播报" ariarole="button" class="header_faimly" data-type="home">
                             <div bind:tap="mp3" class="header_text color_normal-temp">
                                 <image class="header_faimly_icon"
-                                       src="/static/message/ykm/static/27597bf024b2ecbf42295c976b1eca16.svg"></image>
+                                       src="/static/images/local/27597bf024b2ecbf42295c976b1eca16.svg"></image>
                                 播报
                             </div>
                         </div>
@@ -1979,13 +1979,13 @@
                         <div arialabel="绿码" ariarole="img" bind:tap="showVaccinesGuideHandle"
                              class="img_border img_border_two" id="ykmqrcode">
                             <div style="width:94%;height:94%;background-color:#fff;z-index:10"
-                                 onclick='window.location.href="/sz/ch"'>
+                                 onclick=navigateToMeeting()>
                                 <div bind:tap="handleShowCode" class="img"
                                      style="background:url(data:image/png;base64,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),linear-gradient(#009d3e,#009d3e);background-blend-mode:lighten;background-size:92% 92%;background-position:center;background-repeat:no-repeat;display:block;margin:0 auto"></div>
                             </div>
-                            <image class="golden-border" src="/static/message/ykm/static/b80e47116a2514556e388a3639d93b7c.png"></image>
+                            <image class="golden-border" src="/static/images/local/b80e47116a2514556e388a3639d93b7c.png"></image>
                             <image class="showVaccinesGuide_twoImgicon"
-                                   src="/static/message/ykm/static/456533e61ba93e1af44a2d3a5c2fd032.gif"></image>
+                                   src="/static/images/local/456533e61ba93e1af44a2d3a5c2fd032.gif"></image>
                         </div>
                         <div bindtap="onTapToPDF" class="options">常见问题</div>
                     </div>
@@ -1997,29 +1997,29 @@
                     <div arialabel="健康信息" ariarole="button" bind:tap="handleTap" class="cell-list-item"
                          data-action="report" data-actiontype="jkxx"
                          data-path="/operation_plus/pages/yiqing/daka/user/apply-history/index">
-                        <image class="cell-list-icon" src="/static/message/ykm/static/mm.svg"></image>
+                        <image class="cell-list-icon" src="/static/images/local/mm.svg"></image>
                         <div class="cell-list-font">健康信息</div>
                     </div>
                     <div arialabel="行程卡" ariarole="button" bind:tap="handleTap" class="cell-list-item_img"
                          data-action="report" data-actiondesc="xingchengla" data-actiontype="fuwu"
                          data-appid="wx8f446acf8c4a85f5" data-label="行程卡" data-path="">
-                        <image class="xckcard" src="/static/message/ykm/static/80401c2e955ec7aa3f126ae90801efd1.png"
-                               onclick="navigateToTripCard()"></image>
+                        <image class="xckcard" src="/static/images/local/80401c2e955ec7aa3f126ae90801efd1.png"
+                               onclick="navigateToTravel()"></image>
                     </div>
                 </div>
             </div>
             <div class="sub-block">
                 <div arialabel="核酸检测24小时阴性。" ariarole="text" bind:tap="handleTap"
-                     class="block-item hesuan_block hesuan_blue" onclick='window.location.href="/sz/de"'>
+                     class="block-item hesuan_block hesuan_blue" onclick=navigateToDetail()>
                     <div class="block-item_title">
-                        <image class="block-item_icon" src="/static/message/ykm/static/4508c60464ce3888449fc79e838e73cd.svg"></image>
+                        <image class="block-item_icon" src="/static/images/local/4508c60464ce3888449fc79e838e73cd.svg"></image>
                         核酸检测
-                        <image class="block-item_arrow" src="/static/message/ykm/static/b4455fa4d4a6cd9227fe4703238eeb51.svg"></image>
+                        <image class="block-item_arrow" src="/static/images/local/b4455fa4d4a6cd9227fe4703238eeb51.svg"></image>
                         <div class="tag normalTag">查省外</div>
                     </div>
                     <div>
                         <div class="block-item_desc desc--green no_pt">
-                            <image src="/static/message/ykm/static/2c258b7b98bdfcb70a00c769d685e9bb.svg"></image>
+                            <image src="/static/images/local/2c258b7b98bdfcb70a00c769d685e9bb.svg"></image>
                         </div>
                         <div class="block-item_tips no_pt" id="covid-test-time"></div>
                     </div>
@@ -2029,9 +2029,9 @@
                      data-action="report" data-actiontype="ymxq" data-pagetype="yimiaoPage"
                      data-path="/operation_plus/pages/yiqing/daka/user/vaccines-record/index">
                     <div class="block-item_title">
-                        <image class="block-item_icon" src="/static/message/ykm/static/dd22fed45003c852735958d99a0443e7.png"></image>
+                        <image class="block-item_icon" src="/static/images/local/dd22fed45003c852735958d99a0443e7.png"></image>
                         新冠疫苗
-                        <image class="block-item_arrow" src="/static/message/ykm/static/44e817161a84279f6440d4a52d117900.svg"></image>
+                        <image class="block-item_arrow" src="/static/images/local/44e817161a84279f6440d4a52d117900.svg"></image>
                     </div>
                     <block>
                         <div class="block-item_desc desc--green">已完成全程接种</div>
@@ -2045,36 +2045,36 @@
         <div arialabel="抗原自测" ariarole="button" bind:tap="handleTap" class="entry-item" data-action="report"
              data-actiondesc="kangyuanzice" data-actiontype="fuwu" data-appid="wx6c30c6ad0220942d" data-label="抗原自测"
              data-path="">
-            <image class="entry-item_icon" src="/static/message/ykm/static/0619260a7addd8f89093cd21356e0b80.png"></image>
+            <image class="entry-item_icon" src="/static/images/local/0619260a7addd8f89093cd21356e0b80.png"></image>
             <text class="entry-item_name">抗原自测</text>
         </div>
         <div arialabel="老幼助查" ariarole="button" bind:tap="handleTap" class="entry-item" data-action="report"
              data-actiondesc="laoyouzhucha" data-actiontype="fuwu" data-label="老幼助查"
              data-path="/pages/gsd-ui/g-yss-H5-page/g-yss-H5-page?project=default&path=%2Fpages%2FcheckYkm%2Fcheck%2Findex"
              data-usertype="jzgl">
-            <image class="entry-item_icon" src="/static/message/ykm/static/029ff54f704e01717fb30acf1c95ad75.svg"></image>
+            <image class="entry-item_icon" src="/static/images/local/029ff54f704e01717fb30acf1c95ad75.svg"></image>
             <text class="entry-item_name">老幼助查</text>
         </div>
         <div arialabel="健康申报" ariarole="button" bind:tap="handleTap" class="entry-item" data-action="report"
              data-actiondesc="jiankangshenbao" data-actiontype="fuwu"
              data-path="/operation_plus/pages/yiqing/zhuanqu/list/use/index">
-            <image class="entry-item_icon" src="/static/message/ykm/static/88caf508845af9f014f0df2e2e687061.png"></image>
+            <image class="entry-item_icon" src="/static/images/local/88caf508845af9f014f0df2e2e687061.png"></image>
             <text class="entry-item_name">健康申报</text>
         </div>
         <div arialabel="电子证照" ariarole="button" bind:tap="handleTap" class="entry-item" data-action="report"
              data-actiondesc="dizhizhengzhao" data-actiontype="fuwu" data-label="电子证照"
              data-path="/licenseInfo/pages/cards/my-cards/my-cards">
-            <image class="entry-item_icon" src="/static/message/ykm/static/19bdc888e99ae0d767dcc137ba1464cf.png"></image>
+            <image class="entry-item_icon" src="/static/images/local/19bdc888e99ae0d767dcc137ba1464cf.png"></image>
             <text class="entry-item_name">电子证照</text>
         </div>
     </div>
     <div arialabel="防疫工作台" ariarole="button" bind:tap="handleTap" class="fygztbutton" data-action="report"
          data-actiontype="fyzzt" data-path="/operation_plus/pages/yiqing/daka/user/work-brench/index">
         <div class="fy_action_title">防疫工作台
-            <image class="fy_action_icon" src="/static/message/ykm/static/150f406201f0b0e674a6abe0d1ac292f.svg"></image>
+            <image class="fy_action_icon" src="/static/images/local/150f406201f0b0e674a6abe0d1ac292f.svg"></image>
         </div>
         <div class="fy_action_desc">场所管理员等防疫人员服务入口</div>
-        <image class="fy_acyion_img" src="/static/message/ykm/static/eb0bdecffb0b41192f65fbaee7cb5d39.png"></image>
+        <image class="fy_acyion_img" src="/static/images/local/eb0bdecffb0b41192f65fbaee7cb5d39.png"></image>
     </div>
     <br></div>
 <script>

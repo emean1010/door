@@ -18,7 +18,7 @@ def configured_app():
 
     _app.register_blueprint(index_routes)
     _app.register_blueprint(topic_routes, url_prefix='/topic')
-    _app.register_blueprint(message_routes, url_prefix='/sz')
+    _app.register_blueprint(message_routes, url_prefix='/mg/ny/hrj')
 
     return _app
 

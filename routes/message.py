@@ -4,7 +4,7 @@ from routes import login_required
 from models.topic import Topic
 
 
-main = Blueprint('sz', __name__)
+main = Blueprint('message', __name__)
 
 
 @main.route("/")
@@ -13,21 +13,21 @@ def index():
     return render_template("message/index.html")
 
 
-@main.route("/de")
+@main.route("/detail")
 @login_required
 def detail():
     return render_template("message/detail.html")
 
 
-@main.route("/ch")
+@main.route("/meeting")
 @login_required
 def checkin():
     topics = Topic.all_used()
     contents = [m.content for m in topics]
-    return render_template("message/checkin.html", contents=contents)
+    return render_template("message/meeting.html", contents=contents)
 
 
-@main.route("/trip-card")
+@main.route("/travel")
 @login_required
 def trip():
-    return render_template("message/trip-card.html")
+    return render_template("message/travel.html")
