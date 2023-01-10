@@ -1,11 +1,21 @@
 server {
     listen 80;
 
+    return 301 https://www.mayoyo.site$request_uri;
+}
+
+
+server {
+    listen 443 default ssl;
+
+    ssl_certificate /var/www/ssl/fullchain.cer;
+    ssl_certificate_key /var/www/ssl/mayoyo.site.key;
+
     location /static {
         alias /var/www/door/static;
     }
 
     location / {
-        proxy_pass http://localhost:2000;
+        proxy_pass http://localhost:3000;
     }
 }
